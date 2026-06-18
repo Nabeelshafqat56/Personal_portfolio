@@ -2,180 +2,211 @@
 <html lang="en">
 
 <head>
-    <title>Nabeel Portfolio</title>
+    <title>Services | Nabeel Shafqat | MERN & Next.js Developer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    
+    <!-- Three.js Library for 3D WebGL background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
+    <!-- 3D WebGL Canvas Layer -->
+    <canvas id="canvas-3d"></canvas>
+    
+    <!-- Digital Grid Pattern -->
+    <div class="bg-grid"></div>
+    <div id="cursor-glow"></div>
+
     <div class="KW_progressContainer">
-        <div class="KW_progressBar">
-        </div>
+        <div class="KW_progressBar"></div>
     </div>
-    <div class="page">
-        <nav id="colorlib-main-nav" role="navigation">
-            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-            <div class="js-fullheight colorlib-table">
-                <div class="img" style="background-image: url(./images/vector5.avif);"></div>
-                <div class="colorlib-table-cell js-fullheight">
-                    <div class="row no-gutters">
-                        <div class="col-md-12 text-center">
-                            <h1 class="mb-4"><a href="index.html" class="logo">Nabeel Shafqat</a></h1>
-                            <ul>
-                                <li><a href="index.html"><span><small>01</small>Home</span></a></li>
-                                <li><a href="about.html"><span><small>02</small>Resume</span></a></li>
-                                <li class="active"><a href="services.html"><span><small>03</small>Services</span></a></li>
-                                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                                <!-- <li><a href="blog.html"><span><small>05</small>Blog</span></a></li> -->
-                                <li><a href="contact.html"><span><small>05</small>Contact</span></a></li>
-                            </ul>
-                        </div>
+
+    <!-- Floating Capsule Navbar -->
+    <div class="modern-navbar-container">
+        <nav class="modern-navbar">
+            <div class="modern-logo">
+                <span class="modern-logo-img" style="background-image: url(images/person_1.png);"></span>
+                Nabeel
+            </div>
+            <div class="nav-links">
+                <a href="index.html#sec-home" class="nav-item">Home</a>
+                <a href="index.html#sec-resume" class="nav-item">Resume</a>
+                <a href="index.html#sec-services" class="nav-item active">Services</a>
+                <a href="index.html#sec-portfolio" class="nav-item">Portfolio</a>
+                <a href="index.html#sec-contact" class="nav-item">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav-overlay">
+        <a href="index.html#sec-home">Home</a>
+        <a href="index.html#sec-resume">Resume</a>
+        <a href="index.html#sec-services" class="active">Services</a>
+        <a href="index.html#sec-portfolio">Portfolio</a>
+        <a href="index.html#sec-contact">Contact</a>
+    </div>
+
+    <div class="page-header-spacer"></div>
+
+    <!-- Services Grid Section -->
+    <section class="ftco-section">
+        <div class="bg-watermark watermark-left">CAPABILITIES</div>
+        <div class="container">
+            <div class="heading-section text-center reveal-item">
+                <span>What I Do</span>
+                <h2>Professional Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-laptop-code"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Full Stack Development</h3>
+                        <ul class="service-bullets">
+                            <li>MERN Applications (MongoDB, React)</li>
+                            <li>Next.js SSR & Static Generation</li>
+                            <li>Responsive Mobile-First UIs</li>
+                            <li>Real-time WebSockets / Socket.io</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Database Engineering</h3>
+                        <ul class="service-bullets">
+                            <li>Relational (MySQL, PostgreSQL)</li>
+                            <li>NoSQL Schema Design (MongoDB)</li>
+                            <li>Queries Tuning & Indexing</li>
+                            <li>Database Migration & Caching</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Backend Architecture</h3>
+                        <ul class="service-bullets">
+                            <li>Node.js & Express REST APIs</li>
+                            <li>Secure Authentication (JWT/OAuth)</li>
+                            <li>Payment Gateway Integrations</li>
+                            <li>Microservices Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-cloud"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Cloud & Deployment</h3>
+                        <ul class="service-bullets">
+                            <li>Amazon Web Services (AWS)</li>
+                            <li>VPS Config (Ubuntu, Nginx, PM2)</li>
+                            <li>Render, Netlify & Vercel setups</li>
+                            <li>SSL, Domains & DNS Routing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-palette"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">UI/UX & Prototyping</h3>
+                        <ul class="service-bullets">
+                            <li>Figma Design Mockups</li>
+                            <li>Wireframes & Interactive Flow</li>
+                            <li>Typography & Styling Tokens</li>
+                            <li>Vector Graphics Customization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-tachometer-alt"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Performance Tuning</h3>
+                        <ul class="service-bullets">
+                            <li>Google Lighthouse Optimization</li>
+                            <li>Asset Compression & Lazy Loads</li>
+                            <li>Code Bundling & Minification</li>
+                            <li>SEO Tags & Semantics Auditing</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </nav>
-        <div id="colorlib-page">
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="colorlib-navbar-brand">
-                                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/person_1.png);"></span>Nabeel </a>
-                            </div>
-                            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <section class="ftco-section">
-                <div class="container mt-5">
-                    <div class="row justify-content-center mb-5 pb-5">
-                        <div class="col-md-7 text-center heading-section ftco-animate">
-                            <span>What I Do</span>
-                            <h2>My Services</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="media block-6 services p-3 py-4 d-block text-center">
-                                <div class="icon mb-3"><span class="icon-layers"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading">Full Stack Web Development</h3>
-                                    <h3 class="heading">MERN Applications</h3>
-                                    <h3 class="heading">Responsive UI Design</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="media block-6 services p-3 py-4 d-block text-center">
-                                <div class="icon mb-3"><span class="icon-gears"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading">Database Design</h3>
-                                    <h3 class="heading">MongoDB, MySQL, PostgreSQL</h3>
-                                    <h3 class="heading">API Development</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="media block-6 services p-3 py-4 d-block text-center">
-                                <div class="icon mb-3"><span class="icon-code"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading">Backend Systems</h3>
-                                    <h3 class="heading">Performance Optimization</h3>
-                                    <h3 class="heading">Deployment & Hosting</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer class="ftco-footer ftco-bg-dark ftco-section">
-                <div class="container">
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-5 text-center">
-                            <div class="ftco-footer-widget mb-5">
-                                <ul class="ftco-footer-social list-unstyled">
-
-                                    <li class="ftco-animate">
-                                        <a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a">
-                                            <span class="icon-twitter">
-
-                                   </span>
-
-                                        </a>
-                                    </li>
-                                    <li class="ftco-animate"><a href="https://web.facebook.com/nabeelshafqat56"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="https://www.instagram.com/__wassupnabeel"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="ftco-footer-widget">
-                                <h2 class="mb-3">Contact Me</h2>
-                                <p class="h3 email"><a href="nabeelshafqat56@gmail.com"><span class="__cf_email__" >nabeelshafqat56@gmail.com</span></a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p>
-                                Copyright &copy;
-                                <script data-cfasync="false" src=""></script>
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
-            <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-branding">
+                    <h2 class="footer-logo">Nabeel Shafqat</h2>
+                    <p class="footer-bio">A skilled Full Stack MERN & Next.js developer from Rawalpindi, Pakistan. Crafting high-performance web applications and robust database architectures.</p>
+                    <ul class="about-social-list">
+                        <li><a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a" class="about-social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://web.facebook.com/nabeelshafqat56" class="about-social-link" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/__wassupnabeel" class="about-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html#sec-home">Home</a></li>
+                        <li><a href="index.html#sec-resume">Resume</a></li>
+                        <li><a href="index.html#sec-services">Services</a></li>
+                        <li><a href="index.html#sec-portfolio">Portfolio</a></li>
+                        <li><a href="index.html#sec-contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; <script>document.write(new Date().getFullYear());</script> Nabeel Shafqat. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modernized Loader -->
+    <div id="ftco-loader">
+        <div class="loader-spinner"></div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-    </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a721204ca163fad","serverTiming":{"name":{"cfL4":true}},"version":"2024.7.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

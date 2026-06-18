@@ -2,325 +2,325 @@
 <html lang="en">
 
 <head>
-    <title>Nabeel Portfolio</title>
+    <title>Resume | Nabeel Shafqat | Full Stack Developer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    
+    <!-- Three.js Library for 3D WebGL background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
+    <!-- 3D WebGL Canvas Layer -->
+    <canvas id="canvas-3d"></canvas>
+    
+    <!-- Digital Grid Pattern -->
+    <div class="bg-grid"></div>
+    <div id="cursor-glow"></div>
+
     <div class="KW_progressContainer">
-        <div class="KW_progressBar">
-        </div>
+        <div class="KW_progressBar"></div>
     </div>
-    <div class="page">
-        <nav id="colorlib-main-nav" role="navigation">
-            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-            <div class="js-fullheight colorlib-table">
-                <div class="img" style="background-image: url(./images/vector5.avif);"></div>
-                <div class="colorlib-table-cell js-fullheight">
-                    <div class="row no-gutters">
-                        <div class="col-md-12 text-center">
-                            <h1 class="mb-4"><a href="index.html" class="logo">Nabeel Shafqat</a></h1>
-                            <ul>
-                                <li><a href="index.html"><span><small>01</small>Home</span></a></li>
-                                <li class="active"><a href="about.html"><span><small>02</small>Resume</span></a></li>
-                                <li><a href="services.html"><span><small>03</small>Services</span></a></li>
-                                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                                <!-- <li><a href="blog.html"><span><small>05</small>Blog</span></a></li> -->
-                                <li><a href="contact.html"><span><small>05</small>Contact</span></a></li>
-                            </ul>
+
+    <!-- Floating Capsule Navbar -->
+    <div class="modern-navbar-container">
+        <nav class="modern-navbar">
+            <div class="modern-logo">
+                <span class="modern-logo-img" style="background-image: url(images/person_1.png);"></span>
+                Nabeel
+            </div>
+            <div class="nav-links">
+                <a href="index.html#sec-home" class="nav-item">Home</a>
+                <a href="index.html#sec-resume" class="nav-item active">Resume</a>
+                <a href="index.html#sec-services" class="nav-item">Services</a>
+                <a href="index.html#sec-portfolio" class="nav-item">Portfolio</a>
+                <a href="index.html#sec-contact" class="nav-item">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav-overlay">
+        <a href="index.html#sec-home">Home</a>
+        <a href="index.html#sec-resume" class="active">Resume</a>
+        <a href="index.html#sec-services">Services</a>
+        <a href="index.html#sec-portfolio">Portfolio</a>
+        <a href="index.html#sec-contact">Contact</a>
+    </div>
+
+    <div class="page-header-spacer"></div>
+
+    <!-- About Intro / Biography Section -->
+    <section class="ftco-section" style="padding: 60px 0;">
+        <div class="bg-watermark watermark-right">BIOGRAPHY</div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-container tilt-card reveal-item">
+                    <img src="images/Designer.jpeg" class="about-image tilt-card-pop" alt="Nabeel Shafqat Portrait">
+                </div>
+                <div class="about-text-content reveal-item">
+                    <div class="heading-section text-left">
+                        <span>Profile Summary</span>
+                        <h2>Biography</h2>
+                    </div>
+                    <h3>Full Stack Developer specializing in MERN Stack and Next.js</h3>
+                    <p class="about-bio">
+                        Full Stack Developer specializing in MERN Stack and Next.js with experience building scalable web applications, REST APIs, and real-time systems across healthcare, e-commerce, IoT, and ride-booking platforms. Skilled in React.js, Node.js, Docker, Redis, and AWS deployment with a strong focus on performance optimization, clean architecture, and user experience.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Full Name</span>
+                                <span class="about-stat-val">Nabeel Shafqat</span>
+                            </div>
+                        </div>
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Location</span>
+                                <span class="about-stat-val">Rawalpindi, Pakistan</span>
+                            </div>
+                        </div>
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Email</span>
+                                <span class="about-stat-val"><a href="mailto:nabeelshafqat56@gmail.com">nabeelshafqat56@gmail.com</a></span>
+                            </div>
+                        </div>
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Contact</span>
+                                <span class="about-stat-val"><a href="tel:+923105626647">0310-5626647</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="Nabeel_shafqat.pdf" class="btn-modern-primary" download><i class="fa fa-download"></i> Download Resume</a>
+                        <ul class="about-social-list">
+                            <li><a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a" class="about-social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://web.facebook.com/nabeelshafqat56" class="about-social-link" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/__wassupnabeel" class="about-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Timeline Section -->
+    <section class="ftco-section" style="padding: 60px 0;">
+        <div class="bg-watermark watermark-left">TIMELINE</div>
+        <div class="container">
+            <div class="resume-grid">
+                <!-- Experience Column -->
+                <div class="reveal-item">
+                    <h3 class="resume-column-title"><i class="fa fa-briefcase"></i> Work Experience</h3>
+                    <div class="timeline">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">01/2026 - 05/2026</span>
+                                    <h4 class="timeline-role">Full Stack Developer (Part-Time)</h4>
+                                    <h5 class="timeline-company">Codes Vista</h5>
+                                    <p class="timeline-desc">Built and maintained 5+ scalable MERN Stack and Next.js applications, improving frontend responsiveness and backend performance for client projects. Optimized database queries and containerized/deployed applications using Docker, AWS, and Nginx.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">01/2024 - 12/2025</span>
+                                    <h4 class="timeline-role">MERN Stack Developer (Part-Time)</h4>
+                                    <h5 class="timeline-company">DevThrone</h5>
+                                    <p class="timeline-desc">Delivered 10+ MERN applications for e-commerce, healthcare, and ride-booking clients. Integrated JWT authentication, payment gateways, Firebase services, and 15+ REST APIs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">01/2023 - 12/2024</span>
+                                    <h4 class="timeline-role">JavaScript Developer & Trainer (Part-Time)</h4>
+                                    <h5 class="timeline-company">Codes Vista</h5>
+                                    <p class="timeline-desc">Enhanced UI responsiveness and reduced frontend load times across 6+ web applications. Trained and mentored 40+ students in JavaScript and React.js concepts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Column -->
+                <div class="reveal-item">
+                    <h3 class="resume-column-title"><i class="fa fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">2022 - 2026</span>
+                                    <h4 class="timeline-role">Bachelor of Science in Computer Science</h4>
+                                    <h5 class="timeline-company">PMAS Arid Agriculture University</h5>
+                                    <p class="timeline-desc">Specialized training in software architectures, systems design, object-oriented concepts, algorithms, and web infrastructures.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">2020 - 2022</span>
+                                    <h4 class="timeline-role">Intermediate in Computer Science</h4>
+                                    <h5 class="timeline-company">Govt Gordon College, Rawalpindi</h5>
+                                    <p class="timeline-desc">Foundation courses covering systems analysis, relational database systems, basic network components, and C++ logic modeling.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
-        <div id="colorlib-page">
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="colorlib-navbar-brand">
-                                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/person_1.png);"></span>Nabeel </a>
-                            </div>
-                            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <section class="ftco-section about-section">
-                <div class="container">
-                    <div class="row d-flex my-5" data-scrollax-parent="true">
-                        <div class="col-md-4 author-img" style="background-image: url(images/Designer.jpeg);" data-scrollax=" properties: { translateY: '-70%'}"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-6 wrap ftco-animate">
-                            <div class="about-desc">
-                                <h1 class="bold-text">About</h1>
-                                <div class="p-5">
-                                    <h2 class="mb-5">Hi! I'm Nabeel Shafqat</h2>
-                                    <p>I’m a Full Stack Developer (MERN) with expertise in building dynamic and scalable web applications. My skills span across MongoDB, Express.js, React, and Node.js, along with experience in MySQL and PostgreSQL for relational databases. I excel in designing robust backend systems, integrating RESTful APIs, and optimizing performance to deliver seamless user experiences.
-
-                                        With a strong problem-solving mindset and a passion for modern web technologies, I enjoy turning ideas into reliable, impactful digital products</p>
-                                    <p><a href="Nabeel_shafqat.pdf">Checkout my resume</a></p>
-                                    <ul class="ftco-footer-social list-unstyled mt-4">
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a">
-                                                <span class="icon-twitter">
-
-                                         </span>
-
-                                            </a>
-                                        </li>
-                                        <li><a href="https://web.facebook.com/nabeelshafqat56"><span class="icon-facebook"></span></a></li>
-                                        <li><a href="https://www.instagram.com/__wassupnabeel"><span class="icon-instagram"></span></a></li>
-                                    </ul>
-                                    <h5>Contact me here!</h5>
-                                    <p>Email: <a href="mailto:nabeelshafqat56@gmail.com"><i class="fas fa-envelope"></i> nabeelshafqat56@gmail.com</a></p>
-                                    <p>Phone: <a href="tel:+923105626647"><i class="fas fa-phone-alt"></i> +923105626647</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row d-flex justify-content-end mt-5">
-                        <div class="col-md-10">
-                            <div class="profile ftco-animate">
-                                <h2 class="mb-4">Profile</h2>
-                                <h4 class="mb-4">I'm a Full Stack Developer from Rawalpindi, Pakistan. I aim to make a difference through scalable and impactful digital solutions.</h4>
-                                <p>
-                                    I'm a skilled <b>Full Stack Developer</b>, specializing in the <b>MERN stack</b> and <b>Next.js</b> for building dynamic, high-performance web applications. 
-                                    I excel at crafting efficient, user-friendly solutions while working with <b>databases</b> such as MongoDB, MySQL, and PostgreSQL. 
-                                    With strong expertise in <b>backend development</b>, I design and optimize robust systems, integrate APIs, and ensure seamless performance across applications.
-                                </p>
-                                
-                                <div class="row my-5">
-                                    <div class="col-md-6">
-                                        <p><strong>Name:</strong> <span>Nabeel Shafqat</span></p>
-                                        <p><strong>Address:</strong> <span> Rawalpindi, Pakistan </span></p>
-                                        <p><strong>Phone:</strong> <span>+923105626647</span></p>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="exp mt-5 ftco-animate">
-                                <h2 class="mb-4">Experience</h2>
-                                <div class="exp-wrap py-4">
-                                    <div class="desc">
-                                        <h4>Full Stack Developer <span> - Codes Vista </span> </h4>
-                                        <p class="location">Pakistan</p>
-                                    </div>
-                                    <div class="year">
-                                        <p>2025 - Present</p>
-                                    </div>
-                                </div>
-                                <div class="exp-wrap py-4">
-                                    <div class="desc">
-                                        <h4>MERN Stack Developer <span> - DevThrone </span> </h4>
-                                        <p class="location">Pakistan</p>
-                                    </div>
-                                    <div class="year">
-                                        <p>2024 - 2025</p>
-                                    </div>
-                                </div>
-                                <div class="exp-wrap py-4">
-                                    <div class="desc">
-                                        <h4>Javascript Developer<span> - Codes Vista</span> </h4>
-                                        <p class="location">Rawalpindi - Pakistan</p>
-                                    </div>
-                                    <div class="year">
-                                        <p>2023 - 2024</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="exp mt-5 ftco-animate">
-                                <h2 class="mb-4">Education</h2>
-                                <div class="exp-wrap py-4">
-                                    <div class="desc">
-                                        <h4>Bachelor Degree in Computer Science<span> - Pir Mehr Ali Shah Arid Agriculture University</span> </h4>
-                                        <p class="location">Rawalpindi - Pakistan</p>
-                                    </div>
-                                    <div class="year">
-                                        <p>2022 - 2026</p>
-                                    </div>
-                                </div>
-                                <div class="exp-wrap py-4">
-                                    <div class="desc">
-                                        <h4>Intermediate in Computer Science<span> - Govt Gordon College-Rawalpindi</span> </h4>
-                                        <p class="location">Rawalpindi - Pakistan</p>
-                                    </div>
-                                    <div class="year">
-                                        <p>2020 - 2022</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-5 flex-column ftco-animate">
-                        <div class="col-md-8">
-                            <h2 class="mb-4">My Skills</h2>
-                        </div>
-                    
-                        <!-- MERN / Next.js -->
-                        <div class="col-md-6 animate-box">
-                            <div class="progress-wrap">
-                                <h4>React.js - Next.js - MERN Stack</h4>
-                                <div class="progress">
-                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-                                        <span>90%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Node.js / Backend -->
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                            <div class="progress-wrap">
-                                <h4>Node.js - Express.js (Backend Development)</h4>
-                                <div class="progress">
-                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-                                        <span>95%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Frontend Core -->
-                        <div class="col-md-6 animate-box">
-                            <div class="progress-wrap">
-                                <h4>HTML5 - CSS3 - JavaScript - jQuery</h4>
-                                <div class="progress">
-                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
-                                        <span>95%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Databases -->
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                            <div class="progress-wrap">
-                                <h4>MongoDB - MySQL - PostgreSQL - Firebase</h4>
-                                <div class="progress">
-                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
-                                        <span>95%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Cloud & Deployment -->
-                        <div class="col-md-6 animate-box">
-                            <div class="progress-wrap">
-                                <h4>AWS - VPS - Render - Deployment</h4>
-                                <div class="progress">
-                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                                        <span>80%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <!-- Design Tools -->
-                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                            <div class="progress-wrap">
-                                <h4>Figma - Canva (UI/UX)</h4>
-                                <div class="progress">
-                                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                        <span>75%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </section>
-            <footer class="ftco-footer ftco-bg-dark ftco-section">
-                <div class="container">
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-5 text-center">
-                            <div class="ftco-footer-widget mb-5">
-                                <ul class="ftco-footer-social list-unstyled">
-                                    <li class="ftco-animate">
-                                        <a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a">
-                                            <span class="icon-twitter">
-
-                                     </span>
-
-                                        </a>
-                                    </li>
-                                    <li class="ftco-animate"><a href="https://web.facebook.com/nabeelshafqat56"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="https://www.instagram.com/__wassupnabeel"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="ftco-footer-widget">
-                                <h2 class="mb-3">Contact Me</h2>
-                                <p class="h3 email"><a href="nabeelshafqat56@gmail.com"><span class="__cf_email__" >nabeelshafqat56@gmail.com</span></a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p>
-                                Copyright &copy;
-                                <script data-cfasync="false" src=""></script>
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
-            <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
         </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="ftco-section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="heading-section text-center reveal-item">
+                <span>Capabilities</span>
+                <h2>Technical Skills</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript (ES6+) / TypeScript / Python</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">React.js / Next.js / Tailwind CSS</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">Node.js / Express.js / REST APIs & WebSockets</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">MongoDB / PostgreSQL / Redis / Firebase</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="92%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">Docker / AWS EC2 / Nginx / VPS Hosting</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="88%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">Microservices / OpenAI API / JWT & OAuth</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-branding">
+                    <h2 class="footer-logo">Nabeel Shafqat</h2>
+                    <p class="footer-bio">A skilled Full Stack MERN & Next.js developer from Rawalpindi, Pakistan. Crafting high-performance web applications and robust database architectures.</p>
+                    <ul class="about-social-list">
+                        <li><a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a" class="about-social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://web.facebook.com/nabeelshafqat56" class="about-social-link" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/__wassupnabeel" class="about-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html#sec-home">Home</a></li>
+                        <li><a href="index.html#sec-resume">Resume</a></li>
+                        <li><a href="index.html#sec-services">Services</a></li>
+                        <li><a href="index.html#sec-portfolio">Portfolio</a></li>
+                        <li><a href="index.html#sec-contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; <script>document.write(new Date().getFullYear());</script> Nabeel Shafqat. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modernized Loader -->
+    <div id="ftco-loader">
+        <div class="loader-spinner"></div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-    </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a71fe285813a1af","serverTiming":{"name":{"cfL4":true}},"version":"2024.7.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

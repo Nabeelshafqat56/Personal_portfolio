@@ -2,493 +2,632 @@
 <html lang="en">
 
 <head>
-    <title>
-        Nabeel Shafqat
-    </title>
+    <title>Nabeel Shafqat | Full Stack MERN Developer Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    
+    <!-- Three.js Library for WebGL Storytelling Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
+    <!-- WebGL Canvas Background -->
+    <canvas id="canvas-3d"></canvas>
+    
+    <div class="bg-grid"></div>
+    <div id="cursor-glow"></div>
+
     <div class="KW_progressContainer">
-        <div class="KW_progressBar">
-        </div>
+        <div class="KW_progressBar"></div>
     </div>
-    <div class="page">
-        <nav id="colorlib-main-nav" role="navigation">
-            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-            <div class="js-fullheight colorlib-table">
-                <div class="img" style="background-image: url(./images/vector5.avif);"></div>
-                <div class="colorlib-table-cell js-fullheight">
-                    <div class="row no-gutters">
-                        <div class="col-md-12 text-center">
-                            <h1 class="mb-4"><a href="index.html" class="logo">Nabeel Shafqat</a></h1>
-                            <ul>
-                                <li class="active"><a href="index.html"><span><small>01</small>Home</span></a></li>
-                                <li><a href="about.html"><span><small>02</small>Resume</span></a></li>
-                                <li><a href="services.html"><span><small>03</small>Services</span></a></li>
-                                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                                <!-- <li><a href="blog.html"><span><small>05</small>Blog</span></a></li> -->
-                                <li><a href="contact.html"><span><small>05</small>Contact</span></a></li>
-                            </ul>
+
+    <!-- Floating Capsule Navbar -->
+    <div class="modern-navbar-container">
+        <nav class="modern-navbar">
+            <div class="modern-logo">
+                <span class="modern-logo-img" style="background-image: url(images/person_1.png);"></span>
+                Nabeel
+            </div>
+            <div class="nav-links">
+                <a href="#sec-home" class="nav-item active">Home</a>
+                <a href="#sec-resume" class="nav-item">Resume</a>
+                <a href="#sec-services" class="nav-item">Services</a>
+                <a href="#sec-portfolio" class="nav-item">Portfolio</a>
+                <a href="#sec-contact" class="nav-item">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav-overlay">
+        <a href="#sec-home" class="active">Home</a>
+        <a href="#sec-resume">Resume</a>
+        <a href="#sec-services">Services</a>
+        <a href="#sec-portfolio">Portfolio</a>
+        <a href="#sec-contact">Contact</a>
+    </div>
+
+    <!-- Right-Side Fixed Storytelling Dots Navigation -->
+    <ul class="chapter-nav">
+        <li class="chapter-dot active" data-chapter="0"><span>01 / CODE DNA</span></li>
+        <li class="chapter-dot" data-chapter="1"><span>02 / LOGICAL MIND</span></li>
+        <li class="chapter-dot" data-chapter="2"><span>03 / SYSTEMS LOOP</span></li>
+        <li class="chapter-dot" data-chapter="3"><span>04 / CREATIONS WAVE</span></li>
+        <li class="chapter-dot" data-chapter="4"><span>05 / MESH NETWORK</span></li>
+    </ul>
+
+    <!-- CHAPTER 01: CODE DNA (HERO SECTION) -->
+    <section id="sec-home" class="story-section" data-chapter="0">
+        <div class="bg-watermark watermark-left">DEVELOPER</div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content reveal-item">
+                    <span class="hero-hello">Hello, World! I'm</span>
+                    <h1 class="hero-name">Nabeel Shafqat</h1>
+                    <div class="hero-role-wrapper">
+                        <span class="hero-role-static">A</span>
+                        <span class="hero-role-typed"></span>
+                        <span class="hero-role-cursor"></span>
+                    </div>
+                    <p class="hero-desc">
+                        Full Stack Developer specializing in MERN Stack and Next.js with experience building scalable web applications, REST APIs, and real-time systems across healthcare, e-commerce, IoT, and ride-booking platforms. Skilled in React.js, Node.js, Docker, Redis, and AWS deployment with a strong focus on performance optimization, clean architecture, and user experience.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#sec-portfolio" class="btn-modern-primary">View My Works</a>
+                        <a href="#sec-contact" class="btn-modern-outline">Let's Connect</a>
+                    </div>
+                </div>
+                
+                <!-- 3D Tilt Code Terminal -->
+                <div class="terminal-window tilt-card reveal-item">
+                    <div class="terminal-header tilt-card-pop">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn term-close"></span>
+                            <span class="terminal-btn term-min"></span>
+                            <span class="terminal-btn term-max"></span>
+                        </div>
+                        <span class="terminal-title">nabeel.json</span>
+                    </div>
+                    <div class="terminal-body tilt-card-pop">
+                        <span class="term-code"><span class="term-key">"developer"</span>: {</span>
+                        <span class="term-code">&nbsp;&nbsp;<span class="term-key">"name"</span>: <span class="term-val">"Nabeel Shafqat"</span>,</span>
+                        <span class="term-code">&nbsp;&nbsp;<span class="term-key">"role"</span>: <span class="term-val">"Full Stack Web Developer"</span>,</span>
+                        <span class="term-code">&nbsp;&nbsp;<span class="term-key">"stack"</span>: [</span>
+                        <span class="term-code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-val">"MongoDB"</span>, <span class="term-val">"Express.js"</span>, <span class="term-val">"React"</span>, <span class="term-val">"Node.js"</span></span>
+                        <span class="term-code">&nbsp;&nbsp;],</span>
+                        <span class="term-code">&nbsp;&nbsp;<span class="term-key">"databases"</span>: [</span>
+                        <span class="term-code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="term-val">"MySQL"</span>, <span class="term-val">"PostgreSQL"</span>, <span class="term-val">"Firebase"</span></span>
+                        <span class="term-code">&nbsp;&nbsp;],</span>
+                        <span class="term-code">&nbsp;&nbsp;<span class="term-key">"passion"</span>: <span class="term-val">"Turning complex ideas into scalable products"</span></span>
+                        <span class="term-code">}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTER 02: LOGICAL MIND (RESUME / SKILLS / ABOUT) -->
+    <section id="sec-resume" class="story-section" style="flex-direction: column;" data-chapter="1">
+        <div class="bg-watermark watermark-right">LOGICAL</div>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-container tilt-card reveal-item">
+                    <img src="images/Designer.jpeg" class="about-image tilt-card-pop" alt="Nabeel Shafqat Portrait">
+                </div>
+                <div class="about-text-content reveal-item">
+                    <div class="heading-section text-left">
+                        <span>The Mindset</span>
+                        <h2>About & Resume</h2>
+                    </div>
+                    <h3>Turning Ideas into Seamless Digital Solutions</h3>
+                    <p class="about-bio">
+                        I’m a Full Stack Developer specializing in the MERN Stack and Next.js, with a proven track record of building scalable web applications, REST APIs, and real-time systems across various sectors including healthcare, e-commerce, IoT, and ride-booking. I focus on optimizing database queries, setting up containerized workflows, and designing smooth, modern user interfaces.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Location</span>
+                                <span class="about-stat-val">Rawalpindi, Pakistan</span>
+                            </div>
+                        </div>
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Email</span>
+                                <span class="about-stat-val"><a href="mailto:nabeelshafqat56@gmail.com">nabeelshafqat56@gmail.com</a></span>
+                            </div>
+                        </div>
+                        <div class="about-stat-item tilt-card">
+                            <div class="tilt-card-pop">
+                                <span class="about-stat-label">Phone</span>
+                                <span class="about-stat-val"><a href="tel:+923105626647">0310-5626647</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="Nabeel_shafqat.pdf" class="btn-modern-primary" download><i class="fa fa-download"></i> Get Resume</a>
+                        <ul class="about-social-list">
+                            <li><a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a" class="about-social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://web.facebook.com/nabeelshafqat56" class="about-social-link" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/__wassupnabeel" class="about-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Resume Timeline -->
+            <div class="resume-grid">
+                <!-- Experience Column -->
+                <div class="reveal-item">
+                    <h3 class="resume-column-title"><i class="fa fa-briefcase"></i> Experience</h3>
+                    <div class="timeline">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">01/2026 - 05/2026</span>
+                                    <h4 class="timeline-role">Full Stack Developer (Part-Time)</h4>
+                                    <h5 class="timeline-company">Codes Vista</h5>
+                                    <p class="timeline-desc">Built and maintained 5+ scalable MERN & Next.js client applications, decreasing average API response times by 35% and streamlining production deployments via Docker, AWS EC2, and Nginx.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">01/2024 - 12/2025</span>
+                                    <h4 class="timeline-role">MERN Stack Developer (Part-Time)</h4>
+                                    <h5 class="timeline-company">DevThrone</h5>
+                                    <p class="timeline-desc">Delivered 10+ MERN apps for e-commerce, healthcare, and ride-booking clients. Integrated JWT auth, payment APIs, Firebase services, and 15+ REST APIs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">01/2023 - 12/2024</span>
+                                    <h4 class="timeline-role">JavaScript Developer & Trainer (Part-Time)</h4>
+                                    <h5 class="timeline-company">Codes Vista</h5>
+                                    <p class="timeline-desc">Enhanced UI loading and responsiveness using React.js. Created reusable component libraries and trained 40+ students in practical web technologies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Column -->
+                <div class="reveal-item">
+                    <h3 class="resume-column-title"><i class="fa fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">2022 - 2026</span>
+                                    <h4 class="timeline-role">Bachelor of Science in Computer Science</h4>
+                                    <h5 class="timeline-company">PMAS Arid Agriculture University</h5>
+                                    <p class="timeline-desc">Specialized training in software architectures, systems design, object-oriented concepts, algorithms, and web infrastructures.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <div class="timeline-card tilt-card">
+                                <div class="tilt-card-pop">
+                                    <span class="timeline-year">2020 - 2022</span>
+                                    <h4 class="timeline-role">Intermediate in Computer Science</h4>
+                                    <h5 class="timeline-company">Govt Gordon College, Rawalpindi</h5>
+                                    <p class="timeline-desc">Foundation courses covering systems analysis, relational database systems, basic network components, and C++ logic modeling.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
-        <div id="colorlib-page">
-            <header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="colorlib-navbar-brand">
-                                <a class="colorlib-logo" href="index.html"><span class="logo-img" style="background-image: url(images/person_1.png);"></span>Nabeel </a>
-                            </div>
-                            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+
+            <!-- Skills block -->
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript (ES6+) / TypeScript / Python</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="90%"></div>
                         </div>
                     </div>
                 </div>
-            </header>
-            <section class="home-slider owl-carousel js-fullheight">
-                <div class="slider-item js-fullheight">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-                            <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                                <p><a href="#" class="scroll">Hello! I'm</a></p>
-                                <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Nabeel Shafqat</h1>
-                            </div>
+                <!-- Skill 2 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">React.js / Next.js / Tailwind CSS</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="95%"></div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-item js-fullheight">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="row slider-text align-items-center text-center justify-content-center" data-scrollax-parent="true">
-                            <div class="col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                                <p><a href="#" class="scroll">I'm from Rawalpindi</a></p>
-                                <h1 class="mb-3" data-scrollax="properties: {translateY: '30%', opacity: 1.6}">A Full Stack Developer</h1>
-                            </div>
+                <!-- Skill 3 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">Node.js / Express.js / REST APIs & WebSockets</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="95%"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="ftco-section about-section">
-                <div class="container">
-                    <div class="row d-flex" data-scrollax-parent="true">
-                        <div class="col-md-4 author-img" style="background-image: url(images/Designer.jpeg);" data-scrollax=" properties: { translateY: '-70%'}"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-6 wrap ftco-animate">
-                            <div class="about-desc">
-                                <h1 class="bold-text">About</h1>
-                                <div class="p-5">
-                                    <h2 class="mb-5">Hi! I'm Nabeel Shafqat</h2>
-                                    <p>I’m a Full Stack Developer (MERN) with expertise in building dynamic and scalable web applications. My skills span across MongoDB, Express.js, React, and Node.js, along with experience in MySQL and PostgreSQL for relational databases. I excel in designing robust backend systems, integrating RESTful APIs, and optimizing performance to deliver seamless user experiences.
-
-                                        With a strong problem-solving mindset and a passion for modern web technologies, I enjoy turning ideas into reliable, impactful digital products.</p>
-                                    <p><a href="Nabeel_shafqat.pdf">Checkout my resume</a></p>
-                                    <ul class="ftco-footer-social list-unstyled mt-4">
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a">
-                                                <span class="icon-twitter">
-
-                                           </span>
-
-                                            </a>
-                                        </li>
-                                        <li><a href="https://web.facebook.com/nabeelshafqat56"><span class="icon-facebook"></span></a></li>
-                                        <li><a href="https://www.instagram.com/__wassupnabeel"><span class="icon-instagram"></span></a></li>
-                                    </ul>
-                                    <h5>Contact me here!</h5>
-                                    <p>Email: <a href="mailto:nabeelshafqat56@gmail.com"><i class="fas fa-envelope"></i> nabeelshafqat56@gmail.com</a></p>
-                                    <p>Phone: <a href="tel:+923105626647"><i class="fas fa-phone-alt"></i> +923105626647</a></p>
-                                </div>
-                            </div>
+                <!-- Skill 4 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">MongoDB / PostgreSQL / Redis / Firebase</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="92%"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="ftco-section">
-                <div class="container">
-                    <div class="row justify-content-center mb-5 pb-5">
-                        <div class="col-md-7 text-center heading-section ftco-animate">
-                            <span>What I Do</span>
-                            <h2>My Services</h2>
+                <!-- Skill 5 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">Docker / AWS EC2 / Nginx / VPS Hosting</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="88%"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <!-- First Column -->
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="media block-6 services p-3 py-4 d-block text-center">
-                                <div class="icon mb-3"><span class="icon-layers"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading">Full Stack Web Development</h3>
-                                    <h3 class="heading">MERN Applications</h3>
-                                    <h3 class="heading">Responsive UI Design</h3>
-                                </div>
-                            </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="skill-card tilt-card reveal-item">
+                    <div class="tilt-card-pop">
+                        <div class="skill-info">
+                            <span class="skill-name">Microservices / OpenAI API / JWT & OAuth</span>
+                            <span class="skill-percentage">85%</span>
                         </div>
-                        <!-- Second Column -->
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="media block-6 services p-3 py-4 d-block text-center">
-                                <div class="icon mb-3"><span class="icon-gears"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading">Database Design</h3>
-                                    <h3 class="heading">MongoDB, MySQL, PostgreSQL</h3>
-                                    <h3 class="heading">API Development</h3>
-                                </div>
-                            </div>
+                        <div class="skill-track">
+                            <div class="skill-bar" data-width="85%"></div>
                         </div>
-                        <!-- Third Column -->
-                        <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-                            <div class="media block-6 services p-3 py-4 d-block text-center">
-                                <div class="icon mb-3"><span class="icon-code"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading">Backend Systems</h3>
-                                    <h3 class="heading">Performance Optimization</h3>
-                                    <h3 class="heading">Deployment & Hosting</h3>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTER 03: SYSTEMS LOOP (SERVICES) -->
+    <section id="sec-services" class="story-section" data-chapter="2">
+        <div class="bg-watermark watermark-left">SYSTEMS</div>
+        <div class="container">
+            <div class="heading-section text-center reveal-item">
+                <span>Capabilities</span>
+                <h2>Expert Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-laptop-code"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Full Stack Development</h3>
+                        <ul class="service-bullets">
+                            <li>MERN Applications (MongoDB, React)</li>
+                            <li>Next.js SSR & Static Generation</li>
+                            <li>Responsive Mobile-First UIs</li>
+                            <li>Real-time WebSockets / Socket.io</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Database Engineering</h3>
+                        <ul class="service-bullets">
+                            <li>Relational (MySQL, PostgreSQL)</li>
+                            <li>NoSQL Schema Design (MongoDB)</li>
+                            <li>Queries Tuning & Indexing</li>
+                            <li>Database Migration & Caching</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card tilt-card reveal-item">
+                    <div class="service-icon-wrapper tilt-card-pop">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <div class="tilt-card-pop">
+                        <h3 class="service-title">Backend Architecture</h3>
+                        <ul class="service-bullets">
+                            <li>Node.js & Express REST APIs</li>
+                            <li>Secure Authentication (JWT/OAuth)</li>
+                            <li>Payment Gateway Integrations</li>
+                            <li>Microservices Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTER 04: CREATIONS WAVE (PORTFOLIO GRID) -->
+    <section id="sec-portfolio" class="story-section" data-chapter="3">
+        <div class="bg-watermark watermark-right">CREATIONS</div>
+        <div class="container">
+            <div class="heading-section text-center reveal-item">
+                <span>Highlight Works</span>
+                <h2>Completed Projects</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1: AI-Based Recitation Tutor -->
+                <div class="project-card tilt-card reveal-item">
+                    <div class="project-image-wrapper">
+                        <img src="images/projects/QuranicTajweed.png" class="project-image" alt="AI Tajweed Tutor Screenshot">
+                        <div class="project-overlay">
+                            <span class="project-action-btn"><i class="fa fa-robot"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-content tilt-card-pop">
+                        <span class="project-tag">AI & WebSockets</span>
+                        <h3 class="project-title">AI Tajweed Tutor</h3>
+                        <p class="project-desc">AI-powered Quran recitation platform featuring real-time Tajweed correction detection, built using Node.js, Python, Redis, Docker, and WebSockets.</p>
+                        <span class="project-link" style="color: var(--text-muted);">Real-Time Platform</span>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Boxtech IoT -->
+                <div class="project-card tilt-card reveal-item">
+                    <div class="project-image-wrapper">
+                        <img src="images/projects/boxtech.png" class="project-image" alt="Boxtech IoT Dashboard Screenshot">
+                        <div class="project-overlay">
+                            <span class="project-action-btn"><i class="fa fa-satellite-dish"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-content tilt-card-pop">
+                        <span class="project-tag">IoT & Analytics</span>
+                        <h3 class="project-title">Boxtech IoT Dashboard</h3>
+                        <p class="project-desc">Real-time fleet management dashboard engineered for live vehicle tracking, temperature logging, sensory telemetry inputs, and data analytics.</p>
+                        <span class="project-link" style="color: var(--text-muted);">Telemetry Platform</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Fair Mart -->
+                <div class="project-card tilt-card reveal-item">
+                    <div class="project-image-wrapper">
+                        <img src="images/projects/fairmart.png" class="project-image" alt="Fair Mart Screenshot">
+                        <div class="project-overlay">
+                            <a href="https://24sevenfairmart.com" target="_blank" class="project-action-btn"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content tilt-card-pop">
+                        <span class="project-tag">E-Commerce</span>
+                        <h3 class="project-title"><a href="https://24sevenfairmart.com" target="_blank">Fair Mart</a></h3>
+                        <p class="project-desc">High-performance e-commerce catalog platform supporting bulk CSV imports, comprehensive product management, and dynamic customer loyalty points.</p>
+                        <a href="https://24sevenfairmart.com" target="_blank" class="project-link">Launch Live <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Pak Care Link -->
+                <div class="project-card tilt-card reveal-item">
+                    <div class="project-image-wrapper">
+                        <img src="images/projects/pakcarelink.png" class="project-image" alt="Pak Care Link Screenshot">
+                        <div class="project-overlay">
+                            <a href="https://doctor-frontend-web.netlify.app" target="_blank" class="project-action-btn"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content tilt-card-pop">
+                        <span class="project-tag">Healthcare</span>
+                        <h3 class="project-title"><a href="https://doctor-frontend-web.netlify.app" target="_blank">Pak Care Link</a></h3>
+                        <p class="project-desc">Telemedicine web app supporting live appointment scheduling, location-based clinic search, secure doctor-patient chats, and video consultations.</p>
+                        <a href="https://doctor-frontend-web.netlify.app" target="_blank" class="project-link">Launch Live <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Trio Trips -->
+                <div class="project-card tilt-card reveal-item">
+                    <div class="project-image-wrapper">
+                        <img src="images/projects/triotrips.png" class="project-image" alt="Trio Trips Screenshot">
+                        <div class="project-overlay">
+                            <a href="https://trio-trips.netlify.app" target="_blank" class="project-action-btn"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content tilt-card-pop">
+                        <span class="project-tag">Cab Booking</span>
+                        <h3 class="project-title"><a href="https://trio-trips.netlify.app" target="_blank">Trio Trips</a></h3>
+                        <p class="project-desc">Cab booking portal integrating WebSockets real-time ride tracking, automatic fare computation, and payment gateway infrastructure.</p>
+                        <a href="https://trio-trips.netlify.app" target="_blank" class="project-link">Launch Live <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;" class="reveal-item">
+                <a href="portfolio.html" class="btn-modern-primary">See Full Showcase</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPTER 05: MESH NETWORK (CONTACT & ACHIEVEMENTS) -->
+    <section id="sec-contact" class="story-section" style="flex-direction: column;" data-chapter="4">
+        <div class="bg-watermark watermark-left">NETWORKS</div>
+        <div class="container">
+            <div class="heading-section text-center reveal-item">
+                <span>Connect</span>
+                <h2>Achievements & Contact</h2>
+            </div>
+            
+            <!-- Achievements -->
+            <div class="counter-grid tilt-card reveal-item">
+                <div class="counter-item tilt-card-pop">
+                    <span class="counter-number" data-count="50">0+</span>
+                    <span class="counter-label">Happy Clients</span>
+                </div>
+                <div class="counter-item tilt-card-pop">
+                    <span class="counter-number" data-count="215">0+</span>
+                    <span class="counter-label">Projects Completed</span>
+                </div>
+                <div class="counter-item tilt-card-pop">
+                    <span class="counter-number" data-count="295">0+</span>
+                    <span class="counter-label">Cups of Coffee</span>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-cards-container reveal-item">
+                    <!-- Location -->
+                    <div class="contact-info-card tilt-card">
+                        <div class="contact-info-icon tilt-card-pop">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-details tilt-card-pop">
+                            <h4>Location</h4>
+                            <p>Rawalpindi, Pakistan</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="contact-info-card tilt-card">
+                        <div class="contact-info-icon tilt-card-pop">
+                            <i class="fa fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info-details tilt-card-pop">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+923105626647">0310-5626647</a></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="contact-info-card tilt-card">
+                        <div class="contact-info-icon tilt-card-pop">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-details tilt-card-pop">
+                            <h4>Email</h4>
+                            <p><a href="mailto:nabeelshafqat56@gmail.com">nabeelshafqat56@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
                 
-            </section>
-            <section class="ftco-section">
-                <div class="container mt-5">
-                    <div class="row justify-content-center mb-5 pb-5">
-                        <div class="col-md-7 text-center heading-section ftco-animate">
-                            <span>Portfolio</span>
-                            <h2>Checkout a few of my works</h2>
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://24sevenfairmart.com" class="image d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/fairmart.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center"> -->
-                                <!-- <span class="icon-search"></span> -->
-                                <!-- </div> -->
-                            </a>
-                            <div class="text">
-                                <h4 class="subheading">E-Commerce</h4>
-                                <h2 class="heading"><a href="https://24sevenfairmart.com">Fair Mart</a></h2>
-                                <p>
-                                    Built a complete e-commerce system with a powerful dashboard for managing products, categories, and orders. Implemented bulk product import via CSV with automated image linking, full loyalty points system, and optimized checkout flow. Developed both frontend and backend for seamless product management and customer experience.
-                                </p>
-                                <p><a href="https://24sevenfairmart.com">View Project</a></p>
-                            </div>
+                <!-- Form -->
+                <div class="contact-form-container tilt-card reveal-item">
+                    <form id="contactForm" class="tilt-card-pop">
+                        <div class="form-group-modern">
+                            <input type="text" class="form-input-modern" id="name" placeholder=" " required>
+                            <label class="form-label-modern" for="name">Your Name</label>
+                            <div class="form-line-glow"></div>
                         </div>
                         
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://mahagrid.vercel.app" class="image order-2 d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/mahagrid.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text order-1">
-                                <h4 class="subheading">E-Commerce</h4>
-                                <h2 class="heading"><a href="https://mahagrid.vercel.app">Mahagrid</a></h2>
-                                <p>
-                                    Developed an e-commerce website for Mahagrid, a popular Korean clothing brand for men and women. Implemented product catalog management, shopping cart, secure checkout, and responsive design for an engaging shopping experience. Focused on performance, clean UI, and seamless navigation across devices.
-                                </p>
-                        
-                                <p><a href="https://mahagrid.vercel.app">View Project</a></p>
-                            </div>
+                        <div class="form-group-modern">
+                            <input type="email" class="form-input-modern" id="email" placeholder=" " required>
+                            <label class="form-label-modern" for="email">Your Email</label>
+                            <div class="form-line-glow"></div>
                         </div>
                         
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="" class="image d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/boxtech.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text">
-                                <h4 class="subheading">Web App</h4>
-                                <h2 class="heading"><a href="">Boxiot</a></h2>
-                                <p>
-                                    Developed Boxiot, an innovative IoT-based web platform that connects and manages smart devices seamlessly. Implemented real-time device monitoring, data visualization dashboards, and remote control features. Built with a focus on scalability, security, and responsive design to ensure a smooth user experience across devices.
-                                </p>
-                                <!-- <p><a href="">View Project</a></p> -->
-                            </div>
-                        </div>
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://beatkit-events.netlify.app" class="image order-2 d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/beatkit.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text order-1">
-                                <h4 class="subheading">Web App</h4>
-                                <h2 class="heading"><a href="https://beatkit-events.netlify.app">BeatKit</a></h2>
-                                <p>
-                                    BeatKit is a dynamic web application developed using the MERN stack and React.js, designed for artists to showcase and collaborate on music. Artists can register, post their music, create virtual band rooms, and collaborate on music projects live. The platform also features robust communication tools, including the ability to create meetings and send audio and text messages within chat rooms, fostering a vibrant and interactive community for music creation and sharing.
-                                </p>
-                                <p><a href="https://beatkit-events.netlify.app">View Project</a></p>
-                            </div>
+                        <div class="form-group-modern">
+                            <input type="text" class="form-input-modern" id="subject" placeholder=" " required>
+                            <label class="form-label-modern" for="subject">Subject</label>
+                            <div class="form-line-glow"></div>
                         </div>
                         
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="" class="image d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/diablo.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text">
-                                <h4 class="subheading">Web App</h4>
-                                <h2 class="heading"><a href="">Diablo</a></h2>
-                                <p>
-                                    Rebuilt and enhanced Diablo, a Next.js game application, after the original source code was lost. Recreated core gameplay from scratch and added new features including improved UI, performance optimizations, and additional levels. Delivered a stable, engaging, and modernized gaming experience.
-                                </p>
-                                <!-- <p><a href="">View Project</a></p> -->
-                            </div>
+                        <div class="form-group-modern">
+                            <textarea class="form-input-modern" id="message" placeholder=" " required></textarea>
+                            <label class="form-label-modern" for="message">Message</label>
+                            <div class="form-line-glow"></div>
                         </div>
                         
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://doctor-frontend-web.netlify.app" class="image order-2 d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/pakcarelink.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text order-1">
-                                <h4 class="subheading">Health Web App</h4>
-                                <h2 class="heading"><a href="https://doctor-frontend-web.netlify.app">Pak Care Link</a></h2>
-                                <p>
-                                    Developed Pak Care Link, a comprehensive healthcare platform providing instant doctor consultations via chat, audio, and video. Integrated location-based search for nearby hospitals, secure medical record management, appointment booking with reminders, multilingual support, and health packages for preventive care. Focused on responsive design and seamless user experience for patients and healthcare providers.
-                                </p>
-                                <p><a href="https://doctor-frontend-web.netlify.app">View Project</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://rafeera.netlify.app" class="image d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/refera.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text">
-                                <h4 class="subheading">Web App</h4>
-                                <h2 class="heading"><a href="https://rafeera.netlify.app">Refera</a></h2>
-                                <p>
-                                    Developed Refera, a health insurance referral platform where users can share referral links through their dashboard. New users filling these links can avail offers and discounts, creating a seamless referral system. Built with a focus on user engagement, secure data handling, and a clear dashboard for tracking referrals and rewards.
-                                </p>
-                                <p><a href="https://rafeera.netlify.app">View Project</a></p>
-                            </div>
-                        </div>
-                        
-
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://solana-web.netlify.app" class="image order-2 d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/solana.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text order-1">
-                                <h4 class="subheading">Website</h4>
-                                <h2 class="heading"><a href="https://solana-web.netlify.app">Solana</a></h2>
-                                <p>
-                                    Developed the Solana website, a digital currency platform providing information, updates, and resources about Solana cryptocurrency. Implemented features to display real-time coin data, blockchain insights, and educational resources for users. Focused on responsive design, intuitive navigation, and secure integration for a reliable crypto experience.
-                                </p>
-                                <p><a href="https://solana-web.netlify.app">View Project</a></p>
-                            </div>
-                        </div>
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://trio-trips.netlify.app" class="image d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/triotrips.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text">
-                                <h4 class="subheading">Web App</h4>
-                                <h2 class="heading"><a href="https://trio-trips.netlify.app">Trio Trips</a></h2>
-                                <p>
-                                    Developed Trio Trips, a taxi booking web application that allows users to book rides, track drivers in real-time, and manage bookings efficiently. Integrated fare calculation, secure payment gateways, driver management, and push notifications for both drivers and customers. Focused on responsive design and a seamless booking experience across devices.
-                                </p>
-                                <p><a href="https://trio-trips.netlify.app">View Project</a></p>
-                            </div>
-                        </div>
-                        <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-                            <a href="https://nft-main-web.netlify.app" class="image order-2 d-flex justify-content-center align-items-center" data-scrollax=" properties: { translateY: '-30%'}">
-                                <img src="images/projects/tokentradehub.png" class="img-fluid" alt="Project Screenshot">
-
-                                <!-- <div class="icon d-flex text-center justify-content-center align-items-center">
-                                    <span class="icon-search"></span>
-                                </div> -->
-                            </a>
-                            <div class="text order-1">
-                                <h4 class="subheading">Web App</h4>
-                                <h2 class="heading"><a href="https://nft-main-web.netlify.app">Token Trade Hub</a></h2>
-                                <p>
-                                    Developed Token Trade Hub, an NFT trading platform leveraging blockchain technology. Users can browse, buy, and sell NFTs securely with real-time blockchain integration. Implemented wallet connectivity, transaction history, marketplace features, and responsive design to ensure a seamless and trustworthy trading experience.
-                                </p>
-                                <p><a href="https://nft-main-web.netlify.app">View Project</a></p>
-                            </div>
-                        </div>
-                        
-
-                    </div>
-                    <!-- <div class="row mt-5">
-                        <div class="col text-center">
-                            <div class="block-27">
-                                <ul>
-                                    <li><a href="#">&lt;</a></li>
-                                    <li class="active"><span>1</span></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">&gt;</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
+                        <button type="button" class="btn-modern-primary" style="width: 100%; border: none;" onclick="sendMail()">Send Message</button>
+                    </form>
                 </div>
-            </section>
-            <section class="ftco-section ftco-counter" id="section-counter">
-                <div class="container">
-                    <div class="row justify-content-center mb-5 pb-5">
-                        <div class="col-md-7 text-center heading-section ftco-animate">
-                            <span>Portfolio</span>
-                            <h2>I love to share my achievements</h2>
-                        </div>
-                    </div>
-                    <div class="row d-flex justify-content-start">
-                        <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-                            <div class="block-18">
-                                <div class="text">
-                                    <span class="ftco-label">Clients</span>
-                                    <strong class="number" data-number="50">0</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
-                            <div class="block-18">
-                                <div class="text">
-                                    <span class="ftco-label">Project done</span>
-                                    <strong class="number" data-number="215">0</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row d-flex justify-content-end">
-                        <div class="col-md-5 counter-wrap ftco-animate">
-                            <div class="block-18">
-                                <div class="text">
-                                    <span class="ftco-label">Cups of coffee</span>
-                                    <strong class="number" data-number="295">0</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer class="ftco-footer ftco-bg-dark ftco-section">
-                <div class="container">
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-md-5 text-center">
-                            <div class="ftco-footer-widget mb-5">
-                                <ul class="ftco-footer-social list-unstyled">
-
-                                    <li class="ftco-animate">
-                                        <a href="https://www.linkedin.com/in/shahrukh-mehmood-2921bb22a/">
-                                            <span class="icon-twitter">
-
-                                       </span>
-
-                                        </a>
-                                    </li>
-                                    <li class="ftco-animate"><a href="https://www.facebook.com/Shahrukhhmm"><span class="icon-facebook"></span></a></li>
-                                    <li class="ftco-animate"><a href="https://www.instagram.com/shahrukhhmm/"><span class="icon-instagram"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="ftco-footer-widget">
-                                <h2 class="mb-3">Contact Me</h2>
-                                <p class="h3 email"><a href="nabeelshafqat56@gmail.com"><span class="__cf_email__" >nabeelshafqat56@gmail.com</span></a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <p>
-                                Copyright &copy;
-                                <script data-cfasync="false" src=""></script>
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-            <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+            </div>
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-branding">
+                    <h2 class="footer-logo">Nabeel Shafqat</h2>
+                    <p class="footer-bio">A skilled Full Stack MERN & Next.js developer from Rawalpindi, Pakistan. Crafting high-performance web applications and robust database architectures.</p>
+                    <ul class="about-social-list">
+                        <li><a href="https://www.linkedin.com/in/nabeel-shafqat-07504330a" class="about-social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://web.facebook.com/nabeelshafqat56" class="about-social-link" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/__wassupnabeel" class="about-social-link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul class="footer-nav">
+                        <li><a href="#sec-home">Home</a></li>
+                        <li><a href="#sec-resume">Resume</a></li>
+                        <li><a href="#sec-services">Services</a></li>
+                        <li><a href="#sec-portfolio">Portfolio</a></li>
+                        <li><a href="#sec-contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; <script>document.write(new Date().getFullYear());</script> Nabeel Shafqat. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loader -->
+    <div id="ftco-loader">
+        <div class="loader-spinner"></div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+        function sendMail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
 
-        function gtag() {
-            dataLayer.push(arguments);
+            if (!name || !email || !subject || !message) {
+                alert('Please fill out all fields before sending.');
+                return;
+            }
+
+            const mailtoURL = `mailto:nabeelshafqat56@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+            window.location.href = mailtoURL;
         }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
     </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a71fa5d1e335f4d","serverTiming":{"name":{"cfL4":true}},"version":"2024.7.0","token":"cd0b4b3a733644fc843ef0b185f98241"}'
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
