@@ -1403,29 +1403,131 @@ textarea.form-input-modern {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--bg-dark);
-    z-index: 9999;
+    z-index: 99999;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+    visibility: visible;
+    transition: visibility 0.8s ease;
 }
 
-#ftco-loader.fade-out {
-    opacity: 0;
+.loader-bg-left, .loader-bg-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #030206;
+    transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+    z-index: 1;
+}
+
+.loader-bg-left {
+    left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.loader-bg-right {
+    right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.loader-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.loader-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 2px rgba(99, 102, 241, 0.2)); }
+    50% { opacity: 1; filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.5)); }
+}
+
+.loader-progress-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.loader-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    font-feature-settings: "tnum";
+}
+
+.loader-bar-bg {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loader-bar-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--accent-gradient);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.8);
+    transition: width 0.1s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+.loader-status {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    height: 15px;
+}
+
+/* Loaded trigger states */
+#ftco-loader.loaded {
     visibility: hidden;
 }
 
-.loader-spinner {
-    width: 50px;
-    height: 50px;
-    border: 3px solid rgba(255, 255, 255, 0.03);
-    border-radius: 50%;
-    border-top-color: var(--accent-primary);
-    animation: spin 1s infinite linear;
+#ftco-loader.loaded .loader-content {
+    opacity: 0;
+    transform: scale(0.95);
 }
 
-@keyframes spin { 100% { transform: rotate(360deg); } }
+#ftco-loader.loaded .loader-bg-left {
+    transform: translateX(-100%);
+}
+
+#ftco-loader.loaded .loader-bg-right {
+    transform: translateX(100%);
+}
 
 /* ==========================================================================
    MEDIA QUERIES (RESPONSIVENESS)

@@ -7,18 +7,71 @@ document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     // ==========================================================================
-    // 1. PAGE LOADER
+    // 1. PAGE LOADER PROGRESS ENGINE
     // ==========================================================================
-    const fadeOutLoader = () => {
+    const initPageLoader = () => {
         const loader = document.getElementById('ftco-loader');
-        if (loader) {
-            setTimeout(() => {
-                loader.classList.add('fade-out');
-            }, 300);
+        if (!loader) return;
+
+        const fill = loader.querySelector('.loader-bar-fill');
+        const num = loader.querySelector('.loader-number');
+        const status = loader.querySelector('.loader-status');
+
+        if (!fill || !num) {
+            window.addEventListener('load', () => {
+                loader.classList.add('loaded');
+            });
+            setTimeout(() => loader.classList.add('loaded'), 3000);
+            return;
         }
+
+        const statuses = [
+            "Initializing Space Flight",
+            "Loading 3D Meshes",
+            "Compiling WebGL Shaders",
+            "Syncing Database Networks",
+            "Polishing Components",
+            "Welcome to the Journey"
+        ];
+
+        let progress = 0;
+        let speed = 20;
+
+        const updateProgress = () => {
+            const increment = Math.floor(Math.random() * 8) + 2;
+            progress = Math.min(progress + increment, 100);
+
+            fill.style.width = `${progress}%`;
+            num.textContent = `${String(progress).padStart(2, '0')}%`;
+
+            const statusIdx = Math.min(Math.floor((progress / 100) * statuses.length), statuses.length - 1);
+            if (status) {
+                status.textContent = statuses[statusIdx];
+            }
+
+            if (progress < 100) {
+                const currentSpeed = (document.readyState === 'complete' && progress > 40) ? 6 : speed;
+                setTimeout(updateProgress, currentSpeed);
+            } else {
+                setTimeout(() => {
+                    loader.classList.add('loaded');
+                    
+                    // Trigger scroll reveals for first section
+                    setTimeout(() => {
+                        const firstSection = document.querySelector('.story-section');
+                        if (firstSection) {
+                            firstSection.querySelectorAll('.reveal-item').forEach(item => {
+                                item.classList.add('revealed');
+                            });
+                        }
+                    }, 400);
+                }, 400);
+            }
+        };
+
+        setTimeout(updateProgress, 100);
     };
-    window.addEventListener('load', fadeOutLoader);
-    setTimeout(fadeOutLoader, 3000); // Fallback
+    initPageLoader();
 
     // ==========================================================================
     // 2. INTERACTIVITY ENGINE: 3D CARD TILT & MAGNETIC PARALLAX
